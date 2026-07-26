@@ -102,6 +102,42 @@ button, a { font: inherit; }
   color: var(--muted);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.language-switcher {
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font: 500 10px "DM Mono", ui-monospace, monospace;
+  color: var(--muted);
+}
+
+.language-switcher button {
+  padding: 3px 5px;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.language-switcher button.active {
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.language-switcher button:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
 .version i,
 .footer-state i {
   width: 8px;
@@ -645,6 +681,7 @@ footer {
 @media (max-width: 650px) {
   .site-header { min-height: 72px; }
   .version { display: none; }
+  .header-actions { gap: 0; }
   .hero { padding-top: 42px; }
   h1 { font-size: clamp(48px, 16vw, 70px); }
   .robot-visual { width: 90vw; }

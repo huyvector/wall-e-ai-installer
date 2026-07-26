@@ -25,15 +25,22 @@
         </span>
         <span>WALL‑E <b>AI</b></span>
       </a>
-      <div class="version"><i></i> Firmware 2.4.0</div>
+      <div class="header-actions">
+        <div class="version"><i></i> Firmware 2.4.0</div>
+        <div class="language-switcher" role="group" aria-label="Language">
+          <button type="button" data-language="vi" aria-pressed="false">VI</button>
+          <span>/</span>
+          <button type="button" data-language="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-copy">
           <div class="eyebrow">XIAO ESP32‑S3 SENSE · 8 MB FLASH</div>
-          <h1>Cắm USB.<br>Đánh thức <em>Wall‑E.</em></h1>
-          <p class="lede">
+          <h1 data-i18n-html="heroTitle">Cắm USB.<br>Đánh thức <em>Wall‑E.</em></h1>
+          <p class="lede" data-i18n="heroDescription">
             Bộ cài chính thức cho robot Wall‑E AI by Huy Vector.
             Không cần VS Code, không cần cài driver nạp riêng.
           </p>
@@ -41,8 +48,8 @@
           <div class="installer-card" data-installer-panel>
             <div class="installer-heading">
               <div>
-                <span class="label">BỘ CÀI WEB</span>
-                <strong>Sẵn sàng nạp firmware</strong>
+                <span class="label" data-i18n="webInstaller">BỘ CÀI WEB</span>
+                <strong data-i18n="readyToFlash">Sẵn sàng nạp firmware</strong>
               </div>
               <span class="browser-status" data-browser-status>
                 Đang kiểm tra trình duyệt…
@@ -52,19 +59,19 @@
             <esp-web-install-button manifest="manifest.json">
               <button class="install-button" slot="activate" type="button">
                 <span class="usb-icon" aria-hidden="true">⌁</span>
-                Kết nối và cài Wall‑E AI
+                <span data-i18n="installButton">Kết nối và cài Wall‑E AI</span>
                 <span class="arrow" aria-hidden="true">→</span>
               </button>
-              <span class="unsupported-message" slot="unsupported">
+              <span class="unsupported-message" slot="unsupported" data-i18n="unsupportedBrowser">
                 Thiết bị này chưa hỗ trợ nạp qua trình duyệt. Hãy dùng Chrome
                 hoặc Edge trên máy tính.
               </span>
-              <span class="unsupported-message" slot="not-allowed">
+              <span class="unsupported-message" slot="not-allowed" data-i18n="openNewTab">
                 Hãy mở trang cài đặt trong một tab riêng để cấp quyền USB.
               </span>
             </esp-web-install-button>
 
-            <p class="fine-print">
+            <p class="fine-print" data-i18n="usbHint">
               Dùng cáp USB truyền dữ liệu. Giữ BOOT rồi nhấn RESET nếu thiết bị
               không xuất hiện trong danh sách cổng.
             </p>
@@ -97,48 +104,48 @@
       <section class="steps" aria-labelledby="steps-title">
         <div class="section-heading">
           <span class="section-index">01—03</span>
-          <h2 id="steps-title">Ba bước là xong</h2>
-          <p>Toàn bộ quá trình diễn ra trên máy tính của bạn.</p>
+          <h2 id="steps-title" data-i18n="threeSteps">Ba bước là xong</h2>
+          <p data-i18n="localProcess">Toàn bộ quá trình diễn ra trên máy tính của bạn.</p>
         </div>
 
         <ol class="step-grid">
           <li>
             <span class="step-number">01</span>
             <div class="step-icon cable" aria-hidden="true"></div>
-            <h3>Cắm cáp USB</h3>
-            <p>Kết nối XIAO ESP32‑S3 Sense bằng cáp có truyền dữ liệu.</p>
+            <h3 data-i18n="stepOneTitle">Cắm cáp USB</h3>
+            <p data-i18n="stepOneBody">Kết nối XIAO ESP32‑S3 Sense bằng cáp có truyền dữ liệu.</p>
           </li>
           <li>
             <span class="step-number">02</span>
             <div class="step-icon port" aria-hidden="true"></div>
-            <h3>Chọn thiết bị</h3>
-            <p>Bấm nút cài đặt và chọn cổng USB/JTAG của ESP32‑S3.</p>
+            <h3 data-i18n="stepTwoTitle">Chọn thiết bị</h3>
+            <p data-i18n="stepTwoBody">Bấm nút cài đặt và chọn cổng USB/JTAG của ESP32‑S3.</p>
           </li>
           <li>
             <span class="step-number">03</span>
             <div class="step-icon spark" aria-hidden="true">✦</div>
-            <h3>Chờ Wall‑E thức dậy</h3>
-            <p>Không rút cáp trong lúc nạp. Thiết bị sẽ tự khởi động lại.</p>
+            <h3 data-i18n="stepThreeTitle">Chờ Wall‑E thức dậy</h3>
+            <p data-i18n="stepThreeBody">Không rút cáp trong lúc nạp. Thiết bị sẽ tự khởi động lại.</p>
           </li>
         </ol>
       </section>
 
       <section class="details">
         <div class="details-copy">
-          <span class="label">TRƯỚC KHI BẮT ĐẦU</span>
-          <h2>Một bản cài đầy đủ,<br>không phụ thuộc OTA.</h2>
+          <span class="label" data-i18n="beforeStart">TRƯỚC KHI BẮT ĐẦU</span>
+          <h2 data-i18n-html="fullInstall">Một bản cài đầy đủ,<br>không phụ thuộc OTA.</h2>
         </div>
         <div class="spec-list">
-          <div><span>Bo mạch</span><strong>Seeed XIAO ESP32‑S3 Sense</strong></div>
+          <div><span data-i18n="board">Bo mạch</span><strong>Seeed XIAO ESP32‑S3 Sense</strong></div>
           <div><span>Camera</span><strong>OV3660 · 240 × 240</strong></div>
-          <div><span>Định dạng</span><strong>Factory image · 8 MB</strong></div>
-          <div><span>Kiểm tra</span><strong>Build verified</strong></div>
+          <div><span data-i18n="format">Định dạng</span><strong>Factory image · 8 MB</strong></div>
+          <div><span data-i18n="verification">Kiểm tra</span><strong data-i18n="buildVerified">Build verified</strong></div>
         </div>
         <aside class="notice">
           <span class="notice-mark">!</span>
           <div>
-            <strong>Lưu ý quan trọng</strong>
-            <p>
+            <strong data-i18n="importantNote">Lưu ý quan trọng</strong>
+            <p data-i18n-html="wifiWarning">
               Cài firmware sẽ xoá Wi‑Fi đã lưu. Sau khi Wall‑E khởi động,
               kết nối mạng <b>Wall‑E AI</b> để cấu hình lại Wi‑Fi.
             </p>
@@ -152,8 +159,8 @@
         <span class="brand-mark" aria-hidden="true"><span></span><span></span></span>
         <span>WALL‑E <b>AI</b></span>
       </div>
-      <p>Designed &amp; built by Huy Vector · <span data-year></span></p>
-      <p class="footer-state"><i></i> Installer online</p>
+      <p><span data-i18n="designedBy">Thiết kế &amp; phát triển bởi Huy Vector</span> · <span data-year></span></p>
+      <p class="footer-state"><i></i> <span data-i18n="installerOnline">Installer online</span></p>
     </footer>
   </body>
 </html>
