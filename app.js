@@ -14,6 +14,12 @@ const translations = {
     unsupportedBrowser: "Thiết bị này chưa hỗ trợ nạp qua trình duyệt. Hãy dùng Chrome hoặc Edge trên máy tính.",
     openNewTab: "Hãy mở trang cài đặt trong một tab riêng để cấp quyền USB.",
     usbHint: "Dùng cáp USB truyền dữ liệu. Giữ BOOT rồi nhấn RESET nếu thiết bị không xuất hiện trong danh sách cổng.",
+    realRobotTitle: "Không chỉ là ý tưởng.<br>Wall‑E đã thức dậy.",
+    realRobotDescription: "Một robot AI nhỏ gọn được chế tác thủ công, có giọng nói, thị giác, biểu cảm và khả năng chuyển động.",
+    realRobotAltOne: "Robot Wall-E AI thực tế do Huy Vector chế tạo",
+    realRobotAltTwo: "Robot Wall-E AI bên cạnh chậu cây Huy Vector",
+    realRobotCaptionOne: "Nguyên mẫu Wall‑E AI",
+    realRobotCaptionTwo: "Chế tác bởi Huy Vector",
     threeSteps: "Ba bước là xong",
     localProcess: "Toàn bộ quá trình diễn ra trên máy tính của bạn.",
     stepOneTitle: "Cắm cáp USB",
@@ -30,6 +36,11 @@ const translations = {
     buildVerified: "Đã xác minh bản build",
     importantNote: "Lưu ý quan trọng",
     wifiWarning: "Cài firmware sẽ xoá Wi‑Fi đã lưu. Sau khi Wall‑E khởi động, kết nối mạng <b>Wall‑E AI</b> để cấu hình lại Wi‑Fi.",
+    youtubeLabel: "YOUTUBE",
+    youtubeTitle: "Xem hướng dẫn và<br>các dự án mới.",
+    youtubeDescription: "Theo dõi hai kênh của Huy Vector để xem video lắp ráp, lập trình và những phiên bản tiếp theo của Wall‑E AI.",
+    youtubeLabLabel: "KÊNH DỰ ÁN & THÍ NGHIỆM",
+    youtubeMainLabel: "KÊNH CHÍNH",
     designedBy: "Thiết kế & phát triển bởi Huy Vector",
     installerOnline: "Bộ cài đang hoạt động",
   },
@@ -48,6 +59,12 @@ const translations = {
     unsupportedBrowser: "This device does not support browser installation. Use Chrome or Edge on a computer.",
     openNewTab: "Open the installer in a new tab to grant USB access.",
     usbHint: "Use a USB data cable. Hold BOOT and press RESET if the device does not appear in the port list.",
+    realRobotTitle: "More than an idea.<br>Wall‑E is awake.",
+    realRobotDescription: "A compact, handcrafted AI robot with voice, vision, expressions, and motion.",
+    realRobotAltOne: "The real Wall-E AI robot built by Huy Vector",
+    realRobotAltTwo: "The Wall-E AI robot beside a Huy Vector plant pot",
+    realRobotCaptionOne: "Wall‑E AI prototype",
+    realRobotCaptionTwo: "Hand-built by Huy Vector",
     threeSteps: "Ready in three steps",
     localProcess: "The entire installation runs locally on your computer.",
     stepOneTitle: "Connect the USB cable",
@@ -64,6 +81,11 @@ const translations = {
     buildVerified: "Build verified",
     importantNote: "Important note",
     wifiWarning: "Installing firmware clears saved Wi‑Fi settings. After Wall‑E restarts, connect to <b>Wall‑E AI</b> to configure Wi‑Fi again.",
+    youtubeLabel: "YOUTUBE",
+    youtubeTitle: "Watch the guides and<br>discover new builds.",
+    youtubeDescription: "Follow Huy Vector's two channels for assembly videos, programming guides, and future versions of Wall‑E AI.",
+    youtubeLabLabel: "PROJECTS & EXPERIMENTS",
+    youtubeMainLabel: "MAIN CHANNEL",
     designedBy: "Designed & built by Huy Vector",
     installerOnline: "Installer online",
   },
@@ -106,6 +128,10 @@ function setLanguage(language, remember = true) {
   document.querySelectorAll("[data-i18n-html]").forEach((element) => {
     const value = copy[element.dataset.i18nHtml];
     if (value) element.innerHTML = value;
+  });
+  document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+    const value = copy[element.dataset.i18nAlt];
+    if (value) element.alt = value;
   });
   languageButtons.forEach((button) => {
     const active = button.dataset.language === currentLanguage;
