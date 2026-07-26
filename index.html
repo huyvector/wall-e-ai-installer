@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10130f">
+    <meta name="description" content="Cài firmware Wall-E AI cho XIAO ESP32-S3 Sense trực tiếp từ trình duyệt.">
+    <meta property="og:title" content="Wall-E AI — Web Installer">
+    <meta property="og:description" content="Cắm USB. Chọn thiết bị. Wall-E sẵn sàng.">
+    <meta property="og:image" content="og.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Wall-E AI — Web Installer</title>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Wall-E AI Installer">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span>
+        </span>
+        <span>WALL‑E <b>AI</b></span>
+      </a>
+      <div class="version"><i></i> Firmware 2.4.0</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">XIAO ESP32‑S3 SENSE · 8 MB FLASH</div>
+          <h1>Cắm USB.<br>Đánh thức <em>Wall‑E.</em></h1>
+          <p class="lede">
+            Bộ cài chính thức cho robot Wall‑E AI by Huy Vector.
+            Không cần VS Code, không cần cài driver nạp riêng.
+          </p>
+
+          <div class="installer-card" data-installer-panel>
+            <div class="installer-heading">
+              <div>
+                <span class="label">BỘ CÀI WEB</span>
+                <strong>Sẵn sàng nạp firmware</strong>
+              </div>
+              <span class="browser-status" data-browser-status>
+                Đang kiểm tra trình duyệt…
+              </span>
+            </div>
+
+            <esp-web-install-button manifest="manifest.json">
+              <button class="install-button" slot="activate" type="button">
+                <span class="usb-icon" aria-hidden="true">⌁</span>
+                Kết nối và cài Wall‑E AI
+                <span class="arrow" aria-hidden="true">→</span>
+              </button>
+              <span class="unsupported-message" slot="unsupported">
+                Thiết bị này chưa hỗ trợ nạp qua trình duyệt. Hãy dùng Chrome
+                hoặc Edge trên máy tính.
+              </span>
+              <span class="unsupported-message" slot="not-allowed">
+                Hãy mở trang cài đặt trong một tab riêng để cấp quyền USB.
+              </span>
+            </esp-web-install-button>
+
+            <p class="fine-print">
+              Dùng cáp USB truyền dữ liệu. Giữ BOOT rồi nhấn RESET nếu thiết bị
+              không xuất hiện trong danh sách cổng.
+            </p>
+          </div>
+        </div>
+
+        <div class="robot-visual" aria-label="Khuôn mặt robot Wall-E">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="face">
+            <div class="face-top">
+              <span class="bolt"></span>
+              <span class="camera-dot"></span>
+            </div>
+            <div class="screen">
+              <div class="eye eye-left"><span></span></div>
+              <div class="eye eye-right"><span></span></div>
+              <div class="scanline"></div>
+            </div>
+            <div class="face-label">
+              <span>WALL‑E</span>
+              <small>AI / HV‑02</small>
+            </div>
+          </div>
+          <div class="visual-note note-top">VOICE · VISION · MOTION</div>
+          <div class="visual-note note-bottom">STATUS / ONLINE</div>
+        </div>
+      </section>
+
+      <section class="steps" aria-labelledby="steps-title">
+        <div class="section-heading">
+          <span class="section-index">01—03</span>
+          <h2 id="steps-title">Ba bước là xong</h2>
+          <p>Toàn bộ quá trình diễn ra trên máy tính của bạn.</p>
+        </div>
+
+        <ol class="step-grid">
+          <li>
+            <span class="step-number">01</span>
+            <div class="step-icon cable" aria-hidden="true"></div>
+            <h3>Cắm cáp USB</h3>
+            <p>Kết nối XIAO ESP32‑S3 Sense bằng cáp có truyền dữ liệu.</p>
+          </li>
+          <li>
+            <span class="step-number">02</span>
+            <div class="step-icon port" aria-hidden="true"></div>
+            <h3>Chọn thiết bị</h3>
+            <p>Bấm nút cài đặt và chọn cổng USB/JTAG của ESP32‑S3.</p>
+          </li>
+          <li>
+            <span class="step-number">03</span>
+            <div class="step-icon spark" aria-hidden="true">✦</div>
+            <h3>Chờ Wall‑E thức dậy</h3>
+            <p>Không rút cáp trong lúc nạp. Thiết bị sẽ tự khởi động lại.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="details">
+        <div class="details-copy">
+          <span class="label">TRƯỚC KHI BẮT ĐẦU</span>
+          <h2>Một bản cài đầy đủ,<br>không phụ thuộc OTA.</h2>
+        </div>
+        <div class="spec-list">
+          <div><span>Bo mạch</span><strong>Seeed XIAO ESP32‑S3 Sense</strong></div>
+          <div><span>Camera</span><strong>OV3660 · 240 × 240</strong></div>
+          <div><span>Định dạng</span><strong>Factory image · 8 MB</strong></div>
+          <div><span>Kiểm tra</span><strong>Build verified</strong></div>
+        </div>
+        <aside class="notice">
+          <span class="notice-mark">!</span>
+          <div>
+            <strong>Lưu ý quan trọng</strong>
+            <p>
+              Cài firmware sẽ xoá Wi‑Fi đã lưu. Sau khi Wall‑E khởi động,
+              kết nối mạng <b>Wall‑E AI</b> để cấu hình lại Wi‑Fi.
+            </p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <div class="brand footer-brand">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span></span>
+        <span>WALL‑E <b>AI</b></span>
+      </div>
+      <p>Designed &amp; built by Huy Vector · <span data-year></span></p>
+      <p class="footer-state"><i></i> Installer online</p>
+    </footer>
+  </body>
+</html>
